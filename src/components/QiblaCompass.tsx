@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { Compass, Kaaba } from 'lucide-react';
+import { Compass, MapPin } from 'lucide-react';
 
 interface QiblaCompassProps {
   qiblaDirection: number | null;
@@ -83,9 +83,10 @@ const QiblaCompass: React.FC<QiblaCompassProps> = ({
           <Compass size={32} />
         </div>
         
-        {/* Qibla symbol (Kaaba) - centered in compass */}
+        {/* Qibla symbol - centered in compass */}
         <div className="absolute">
-          <Kaaba size={20} className="text-primary" />
+          {/* Using MapPin instead of Kaaba since Kaaba is not available */}
+          <MapPin size={20} className="text-primary" />
         </div>
         
         {/* Qibla direction needle */}
