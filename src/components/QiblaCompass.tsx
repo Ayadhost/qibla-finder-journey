@@ -83,28 +83,17 @@ const QiblaCompass: React.FC<QiblaCompassProps> = ({
           <Compass size={32} />
         </div>
         
-        {/* Enhanced Kaaba symbol in center */}
+        {/* Kaaba-like symbol in center - replacing the MapPin */}
         <div className="absolute flex items-center justify-center">
-          <div className="w-12 h-10 bg-gray-900 rounded-sm border border-gray-700 flex items-center justify-center relative shadow-md">
-            {/* Gold-plated door of the Kaaba */}
-            <div className="w-3 h-5 bg-gradient-to-b from-amber-400 to-amber-600 absolute right-1 border-r border-amber-700"></div>
-            
-            {/* Black stone (Al-Hajar Al-Aswad) representation */}
-            <div className="w-2 h-2 bg-gray-700 border border-amber-500/30 rounded-full absolute left-1 top-1"></div>
-            
-            {/* Kiswa (cloth covering) texture effect with gold embroidery */}
-            <div className="w-full h-full absolute top-0 left-0 opacity-40 overflow-hidden">
+          <div className="w-10 h-8 bg-gray-800 rounded-sm border border-gray-700 flex items-center justify-center relative">
+            {/* Gold door-like element on the Kaaba */}
+            <div className="w-3 h-4 bg-amber-500 absolute right-1"></div>
+            {/* Kaaba cloth texture effect */}
+            <div className="w-full h-full absolute top-0 left-0 opacity-30">
               <div className="w-full h-1 bg-gray-700"></div>
-              <div className="w-full h-1 bg-gray-700 mt-1.5"></div>
-              <div className="w-full h-1 bg-gray-700 mt-1.5"></div>
-              <div className="w-full h-1 bg-gray-700 mt-1.5"></div>
-              
-              {/* Gold band (Hizam) around the Kaaba */}
-              <div className="w-full h-1.5 bg-gradient-to-r from-amber-500/70 via-yellow-400/70 to-amber-500/70 absolute top-3.5"></div>
+              <div className="w-full h-1 bg-gray-700 mt-2"></div>
+              <div className="w-full h-1 bg-gray-700 mt-2"></div>
             </div>
-            
-            {/* Subtle shadow for depth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
           </div>
         </div>
         
