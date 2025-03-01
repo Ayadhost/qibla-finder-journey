@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { Compass } from 'lucide-react';
+import { Compass, Kaaba } from 'lucide-react';
 
 interface QiblaCompassProps {
   qiblaDirection: number | null;
@@ -83,6 +83,11 @@ const QiblaCompass: React.FC<QiblaCompassProps> = ({
           <Compass size={32} />
         </div>
         
+        {/* Qibla symbol (Kaaba) - centered in compass */}
+        <div className="absolute">
+          <Kaaba size={20} className="text-primary" />
+        </div>
+        
         {/* Qibla direction needle */}
         <div 
           className="compass-needle absolute w-full h-4"
@@ -92,6 +97,14 @@ const QiblaCompass: React.FC<QiblaCompassProps> = ({
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary shadow-lg" />
             <div className="absolute top-1/2 right-5 -translate-y-1/2 w-[calc(50%-20px)] h-1 bg-primary rounded-r-full" />
             <div className="absolute top-1/2 left-5 -translate-y-1/2 w-4 h-1 bg-gray-400 rounded-l-full" />
+            
+            {/* Red triangle pointer */}
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 -translate-x-1/2">
+              <div 
+                className="w-0 h-0 border-t-8 border-l-8 border-b-8 border-transparent border-l-red-600"
+                style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.3))' }}
+              />
+            </div>
           </div>
         </div>
       </div>
