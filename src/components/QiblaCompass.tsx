@@ -83,18 +83,10 @@ const QiblaCompass: React.FC<QiblaCompassProps> = ({
           <Compass size={32} />
         </div>
         
-        {/* Kaaba-like symbol in center - replacing the MapPin */}
-        <div className="absolute flex items-center justify-center">
-          <div className="w-10 h-8 bg-gray-800 rounded-sm border border-gray-700 flex items-center justify-center relative">
-            {/* Gold door-like element on the Kaaba */}
-            <div className="w-3 h-4 bg-amber-500 absolute right-1"></div>
-            {/* Kaaba cloth texture effect */}
-            <div className="w-full h-full absolute top-0 left-0 opacity-30">
-              <div className="w-full h-1 bg-gray-700"></div>
-              <div className="w-full h-1 bg-gray-700 mt-2"></div>
-              <div className="w-full h-1 bg-gray-700 mt-2"></div>
-            </div>
-          </div>
+        {/* Qibla symbol - centered in compass */}
+        <div className="absolute">
+          {/* Using MapPin instead of Kaaba since Kaaba is not available */}
+          <MapPin size={20} className="text-primary" />
         </div>
         
         {/* Qibla direction needle */}
