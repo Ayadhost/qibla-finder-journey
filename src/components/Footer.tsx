@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="w-10 h-[1px] bg-muted-foreground/30"></div>
       </div>
       <p className="text-xs text-muted-foreground/70">
-        © {currentYear} قبلة فايندر - جميع الحقوق محفوظة
+        © {currentYear} تحديد اتجاه القبلة - جميع الحقوق محفوظة
       </p>
     </footer>
   );
